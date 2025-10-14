@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css files  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- box icons  -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Product Details - Ropy</title>
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header class="header-1" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-grid'></i>
+            </div>
+
+            <a href="index.html" class="nav__logo">Ropy</a>
+
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#featured" class="nav__link">Featured</a></li>
+                    
+                    <li class="nav__item"><a href="new.html" class="nav__link">New</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__search">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search shoes..." class="search-input">
+                    <i class='bx bx-search search-icon'></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <div class="nav__user">
+                <div class="user-icon" id="user-icon">
+                    <i class='bx bx-user'></i>
+                    <span id="nav-username" class="nav-username"></span>
+                </div>
+                <div class="user-panel" id="user-panel">
+                    <div class="user-panel__header">
+                        <i class='bx bx-user-circle'></i>
+                        <span id="user-panel-name">Guest</span>
+                    </div>
+                    <div class="user-panel__grid">
+                        <button id="btn-orders" class="user-panel__btn">Orders</button>
+                        <button id="btn-wishlist" class="user-panel__btn">Wishlist</button>
+                        <button id="btn-cart" class="user-panel__btn">Cart</button>
+                        <button id="btn-buy-again" class="user-panel__btn">Buy again</button>
+                    </div>
+                    <button id="btn-logout" class="user-panel__logout">Log out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-1">
+        <!-- Product Details -->
+        <section class="product section" id="product">
+            <div class="product__container bd-grid">
+                <div class="product__gallery">
+                    <div class="product__main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="product__thumbnails">
+                        <!-- Thumbnails will be added dynamically -->
+                    </div>
+                </div>
+                
+                <div class="product__details">
+            <div class="product__breadcrumb">
+                        <a href="index.html">Home</a> / 
+                        <a href="shop.html">Filter</a> / 
+                        <span id="product-category">Product</span>
+                    </div>
+                    
+                    <h1 id="product-name" class="product__name">Product Name</h1>
+                    
+                    <div class="product__rating">
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <span id="product-rating" class="rating-text">4.8 (124 reviews)</span>
+                    </div>
+                    
+                    <div class="product__price">
+                        <span id="product-price" class="current-price">$149.99</span>
+                        <span id="product-original-price" class="original-price">$199.99</span>
+                        <span class="discount-badge">Save 25%</span>
+                    </div>
+                    
+                    <p id="product-description" class="product__description">
+                        Product description will be loaded here...
+                    </p>
+                    
+                    <div class="product__options">
+                        <div class="option-group">
+                            <label>Size:</label>
+                            <div id="size-options" class="size-options">
+                                <!-- Size options will be added dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div id="color-options" class="color-options">
+                                <!-- Color options will be added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product__actions">
+                        <button id="add-to-cart-btn" class="button add-to-cart-btn">
+                            Add to Cart
+                        </button>
+                        <button class="button-light wishlist-btn">
+                            <i class='bx bx-heart'></i> Add to Wishlist
+                        </button>
+                    </div>
+                    
+                    <div class="product__features">
+                        <h3>Product Features</h3>
+                        <ul>
+                            <li><i class='bx bx-check'></i> Premium materials</li>
+                            <li><i class='bx bx-check'></i> Comfortable fit</li>
+                            <li><i class='bx bx-check'></i> Durable construction</li>
+                            <li><i class='bx bx-check'></i> Easy to clean</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Reviews -->
+        <section class="reviews section" id="reviews">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews__container bd-grid">
+                <div class="review">
+                    <div class="review__header">
+                        <div class="review__user">
+                            <div class="user-avatar">J</div>
+                            <div class="user-info">
+                                <h4>John Doe</h4>
+                                <div class="stars">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="review__date">2 days ago</span>
+                    </div>
+                    <p class="review__text">
+                        Amazing shoes! Very comfortable and great quality. Would definitely recommend.
+                    </p>
+                </div>
+                
+                <div class="review">
+                    <div class="review__header">
+                        <div class="review__user">
+                            <div class="user-avatar">S</div>
+                            <div class="user-info">
+                                <h4>Sarah Smith</h4>
+                                <div class="stars">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star-half'></i>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="review__date">1 week ago</span>
+                    </div>
+                    <p class="review__text">
+                        Love the design and the fit is perfect. Great value for money.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Ropy</h3>
+                <p class="fotter__description">New Collection Of shoes 2020.</p>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Explorer</h3>
+                <ul>
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="index.html#featured" class="footer__link">Featured</a></li>
+                    
+                    <li><a href="new.html" class="footer__link">New</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Support</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Product Help</a></li>
+                    <li><a href="#" class="footer__link">customer Care</a></li>
+                    <li><a href="#" class="footer__link">Athorized services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-google'></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 Ropy. All right reserved</p>
+    </footer>
+
+    <!-- main js  -->
+    <script src="./js/api.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+
+</html>

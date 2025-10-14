@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="an">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css styel -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- box icons  -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Ecommerce website shoes</title>
+</head>
+
+<body>
+    <!-- header  -->
+    <header class="header-1" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-grid'></i>
+            </div>
+
+            <a href="#" class="nav__logo">Ropy</a>
+
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+                    <li class="nav__item"><a href="new.html" class="nav__link">New</a></li>
+                    <li class="nav__item"><a href="./shop.html" class="nav__link">Filter</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__search">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search shoes..." class="search-input">
+                    <i class='bx bx-search search-icon'></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <div class="nav__user">
+                <div class="user-icon" id="user-icon">
+                    <i class='bx bx-user'></i>
+                    <span id="nav-username" class="nav-username"></span>
+                </div>
+                <div class="user-panel" id="user-panel">
+                    <div class="user-panel__header">
+                        <i class='bx bx-user-circle'></i>
+                        <span id="user-panel-name">Guest</span>
+                    </div>
+                    <div class="user-panel__grid">
+                        <button id="btn-orders" class="user-panel__btn">Orders</button>
+                        <button id="btn-wishlist" class="user-panel__btn">Wishlist</button>
+                        <button id="btn-cart" class="user-panel__btn">Cart</button>
+                        <button id="btn-buy-again" class="user-panel__btn">Buy again</button>
+                    </div>
+                    <button id="btn-logout" class="user-panel__logout">Log out</button>
+                </div>
+            </div>
+
+            
+        </nav>
+    </header>
+    <main class="main-1">
+        <!-- home  -->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <div class="home__sneaker">
+                    <div class="home__shape"></div>
+                    <img src="./images/imghome.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__data">
+                    <span class="home__new">New In</span>
+                    <h1 class="home__title">Yezzy Bost <br> SPLY - 350</h1>
+                    <p class="home__description">Explorer the new collection of sneakers</p>
+                    <a href="#featured" class="button" id="explore-now-btn">Explorer Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured  -->
+        <section class="features section" id="featured">
+            <h2 class="section-title">FEATURED</h2>
+
+            <div class="featured__container bd-grid" id="featured-list"></div>
+        </section>
+        <!-- collection  -->
+        <section class="collection section ">
+            <h2 class="section-title">Top Brands</h2>
+            <div class="collection__container bd-grid">
+                <div class="collection__card">
+                    <div class="collection__data">
+                        <h3 class="collection__name">Nike</h3>
+                        <p class="collection__description">New Collection 2020</p>
+                        <a href="#" class="button-light" id="brand-nike-btn">Buy now <i class='bx bx-right-arrow-alt button-icon'></i></a>
+
+                    </div>
+
+                    <img src="./images/collection1.png" alt="" class="Collection__img">
+                </div>
+
+                <div class="collection__card">
+                    <div class="collection__data">
+                        <h3 class="collection__name">Addidas</h3>
+                        <p class="collection__description">New Collection 2020</p>
+                        <a href="#" class="button-light" id="brand-adidas-btn">Buy now <i class='bx bx-right-arrow-alt button-icon'></i></a>
+
+                    </div>
+
+                    <img src="./images/collection2.png" alt="" class="Collection__img">
+                </div>
+
+            </div>
+        </section>
+
+        
+
+
+
+    </main>
+
+    <!-- footer  -->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Robby</h3>
+                <p class="fotter__description">New Collection Of shoes 2020.</p>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Explorer</h3>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#featured" class="footer__link">Featured</a></li>
+                    
+                    <li><a href="new.html" class="footer__link">New</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Support</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Product Help</a></li>
+                    <li><a href="#" class="footer__link">customer Care</a></li>
+                    <li><a href="#" class="footer__link">Athorized services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-google'></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 Raphlx. All right reserved</p>
+
+    </footer>
+
+
+
+    <!-- main js  -->
+    <script src="./js/api.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

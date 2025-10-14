@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css files  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- box icons  -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Responsive Ecommerce Website Sneakers</title>
+
+</head>
+
+<body>
+
+    <!-- header  -->
+
+    <header class="header-1" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-grid'></i>
+            </div>
+
+            <a href="#" class="nav__logo">Ropy</a>
+
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html" class="nav__link ">Home</a></li>
+                    <li class="nav__item"><a href="./index.html#featured" class="nav__link">Featured</a></li>
+                    
+                    <li class="nav__item"><a href="new.html" class="nav__link">New</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active">Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__search">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search shoes..." class="search-input">
+                    <i class='bx bx-search search-icon'></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <div class="nav__user">
+                <div class="user-icon" id="user-icon">
+                    <i class='bx bx-user'></i>
+                    <span id="nav-username" class="nav-username"></span>
+                </div>
+                <div class="user-panel" id="user-panel">
+                    <div class="user-panel__header">
+                        <i class='bx bx-user-circle'></i>
+                        <span id="user-panel-name">Guest</span>
+                    </div>
+                    <div class="user-panel__grid">
+                        <button id="btn-orders" class="user-panel__btn">Orders</button>
+                        <button id="btn-wishlist" class="user-panel__btn">Wishlist</button>
+                        <button id="btn-cart" class="user-panel__btn">Cart</button>
+                        <button id="btn-buy-again" class="user-panel__btn">Buy again</button>
+                    </div>
+                    <button id="btn-logout" class="user-panel__logout">Log out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-1">
+        <!-- Filters and Sorting -->
+        <section class="filters section" id="filters">
+            <div class="filters__container bd-grid">
+                <div class="filters__content">
+                    <div class="filter__group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="filter__select">
+                            <option value="">All Categories</option>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="featured">Featured</option>
+                            <option value="new">New</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter__group">
+                        <label for="price-filter">Price Range:</label>
+                        <select id="price-filter" class="filter__select">
+                            <option value="">All Prices</option>
+                            <option value="0-100">Under $100</option>
+                            <option value="100-150">$100 - $150</option>
+                            <option value="150-200">$150 - $200</option>
+                            <option value="200+">Over $200</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter__group">
+                        <label for="brand-filter">Brand:</label>
+                        <select id="brand-filter" class="filter__select">
+                            <option value="">All Brands</option>
+                            <option value="Nike">Nike</option>
+                            <option value="Adidas">Adidas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter__group">
+                        <label for="sort-filter">Sort By:</label>
+                        <select id="sort-filter" class="filter__select">
+                            <option value="name">Name A-Z</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                    
+                    <button class="button button--secondary" id="clear-filters">Clear Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- all products  -->
+
+        <section class="features section" id="Shop">
+            <h2 class="section-title">All Products <span id="product-count">(11 items)</span></h2>
+
+            <div class="featured__container bd-grid" id="products-container">
+                <article class="sneaker" onclick="goToProduct(1)">
+                    <img src="./images/featured1.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Jordan</span>
+                    <span class="sneaker__preci">$149.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(1, 'US 9', 'Black')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(2)">
+                    <img src="./images/featured2.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Free Nm</span>
+                    <span class="sneaker__preci">$149.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(2, 'US 9', 'Blue')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(3)">
+                    <img src="./images/featured3.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Jordan Yd</span>
+                    <span class="sneaker__preci">$149.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(3, 'US 9', 'Black')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(8)">
+                    <img src="./images/new2.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Sply</span>
+                    <span class="sneaker__preci">$120.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(8, 'US 9', 'Black')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(9)">
+                    <img src="./images/new3.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Sply</span>
+                    <span class="sneaker__preci">$120.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(9, 'US 9', 'Blue')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(10)">
+                    <img src="./images/new4.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Sply</span>
+                    <span class="sneaker__preci">$120.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(10, 'US 9', 'Green')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(11)">
+                    <img src="./images/new5.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike Sply</span>
+                    <span class="sneaker__preci">$120.2</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(11, 'US 9', 'Purple')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+
+                <article class="sneaker" onclick="goToProduct(4)">
+                    <img src="./images/women1.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike womens</span>
+                    <span class="sneaker__preci">$130.55</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(4, 'US 8', 'Pink')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(5)">
+                    <img src="./images/women2.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike womens</span>
+                    <span class="sneaker__preci">$130.55</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(5, 'US 8', 'Blue')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(6)">
+                    <img src="./images/women3.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike womens</span>
+                    <span class="sneaker__preci">$130.55</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(6, 'US 8', 'Black')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+                <article class="sneaker" onclick="goToProduct(7)">
+                    <img src="./images/women4.png" alt="" class="sneaker__img">
+                    <span class="sneaker__name">Nike womens</span>
+                    <span class="sneaker__preci">$130.55</span>
+                    <a href="#" class="button-light" onclick="event.stopPropagation(); addToCart(7, 'US 8', 'Red')">Add To Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+
+            </div>
+
+            <div class="sneaker__pages bd-grid">
+                <div>
+                    <span class="sneaker__pag">1</span>
+                    <span class="sneaker__pag">2</span>
+                    <span class="sneaker__pag">3</span>
+                    <span class="sneaker__pag">4</span>
+                    <span class="sneaker__pag">&#8594;</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- footer  -->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Robby</h3>
+                <p class="fotter__description">New Collection Of shoes 2020.</p>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Explorer</h3>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#featured" class="footer__link">Featured</a></li>
+                    
+                    <li><a href="#new" class="footer__link">New</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Support</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Product Help</a></li>
+                    <li><a href="#" class="footer__link">customer Care</a></li>
+                    <li><a href="#" class="footer__link">Athorized services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-google'></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 Raphlx. All right reserved</p>
+
+    </footer>
+
+
+
+
+
+
+
+    <!-- main js  -->
+    <script src="./js/api.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/filters.js"></script>
+</body>
+
+</html>
