@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Orders - Ropy</title>
+</head>
+<body>
+    <header class="header-1" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-grid'></i>
+            </div>
+            <a href="index.html" class="nav__logo">Ropy</a>
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#featured" class="nav__link">Featured</a></li>
+                    <li class="nav__item"><a href="index.html#new" class="nav__link">New</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Filter</a></li>
+                </ul>
+            </div>
+            <div class="nav__search">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search shoes..." class="search-input">
+                    <i class='bx bx-search search-icon'></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+            <div class="nav__user">
+                <div class="user-icon" id="user-icon">
+                    <i class='bx bx-user'></i>
+                    <span id="nav-username" class="nav-username"></span>
+                </div>
+                <div class="user-panel" id="user-panel">
+                    <div class="user-panel__header">
+                        <i class='bx bx-user-circle'></i>
+                        <span id="user-panel-name">Guest</span>
+                    </div>
+                    <div class="user-panel__grid">
+                        <button id="btn-orders" class="user-panel__btn">Orders</button>
+                        <button id="btn-wishlist" class="user-panel__btn">Wishlist</button>
+                        <button id="btn-cart" class="user-panel__btn">Cart</button>
+                        <button id="btn-buy-again" class="user-panel__btn">Buy again</button>
+                    </div>
+                    <button id="btn-logout" class="user-panel__logout">Log out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-1">
+        <section class="section">
+            <h2 class="section-title">Your Orders</h2>
+            <div class="products__table">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Product</th>
+                            <th>Product Name</th>
+                            <th>Size / Color</th>
+                            <th>Unit Price</th>
+                            <th>Qty</th>
+                            <th>Line Total</th>
+                            <th>Order Subtotal</th>
+                            <th>Status</th>
+                            <th>Estimated Delivery</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Ropy</h3>
+                <p class="fotter__description">User Panel for Ropy Ecommerce</p>
+            </div>
+        </div>
+        <p class="footer__copy">© 2020 Ropy. All right reserved</p>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/orders.js"></script>
+</body>
+</html>
+
