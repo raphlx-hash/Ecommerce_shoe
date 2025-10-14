@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Admin - Orders</title>
+</head>
+
+<body>
+    <header class="header-1" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-grid'></i>
+            </div>
+            <a href="#" class="nav__logo" onclick="event.preventDefault()">Ropy Admin</a>
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="admin.html" class="nav__link">Dashboard</a></li>
+                    <li class="nav__item"><a href="admin-products.html" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="admin-orders.html" class="nav__link active">Orders</a></li>
+                    <li class="nav__item"><a href="admin-users.html" class="nav__link">Users</a></li>
+                </ul>
+            </div>
+            <div class="nav__shop">
+                <button class="button" onclick="location.href='auth.html'">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-1">
+        <section class="admin section">
+            <div class="admin__container bd-grid">
+                <div class="orders-management">
+                    <h2 class="section-title">Orders Management</h2>
+                    <div class="orders__table">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Order #</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Ropy Admin</h3>
+                <p class="fotter__description">Admin Panel for Ropy Ecommerce</p>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__title">Quick Actions</h3>
+                <ul>
+                    <li><a href="admin.html" class="footer__link">Dashboard</a></li>
+                    <li><a href="admin-products.html" class="footer__link">Products</a></li>
+                    <li><a href="admin-orders.html" class="footer__link">Orders</a></li>
+                    <li><a href="admin-users.html" class="footer__link">Users</a></li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__title">Data Management</h3>
+                <ul>
+                    <li><a href="#" onclick="exportTotalsReport()" class="footer__link">Export Data</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; 2020 Ropy Admin. All right reserved</p>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/admin-orders.js"></script>
+</body>
+
+</html>
+
+

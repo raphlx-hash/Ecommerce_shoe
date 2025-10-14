@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Authentication</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        input, button { margin: 5px; padding: 8px; }
+        .result { margin: 10px 0; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Authentication Test</h1>
+    
+    <div class="test-section">
+        <h3>Create Test Admin</h3>
+        <input type="email" id="admin-email" placeholder="admin@test.com" value="admin@test.com">
+        <input type="password" id="admin-password" placeholder="admin123" value="admin123">
+        <input type="text" id="admin-first" placeholder="Admin" value="Admin">
+        <input type="text" id="admin-last" placeholder="User" value="User">
+        <button onclick="createAdmin()">Create Admin</button>
+        <div id="admin-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h3>Test User Login</h3>
+        <input type="email" id="user-email" placeholder="user@test.com" value="user@test.com">
+        <input type="password" id="user-password" placeholder="user123" value="user123">
+        <button onclick="testUserLogin()">Test User Login</button>
+        <div id="user-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h3>Test Admin Login</h3>
+        <input type="email" id="admin-login-email" placeholder="admin@test.com" value="admin@test.com">
+        <input type="password" id="admin-login-password" placeholder="admin123" value="admin123">
+        <button onclick="testAdminLogin()">Test Admin Login</button>
+        <div id="admin-login-result" class="result"></div>
+    </div>
+
+    <script>
+        async function createAdmin() {
+            const data = {
+                email: document.getElementById('admin-email').value,
+                password: document.getElementById('admin-password').value,
+                firstName: document.getElementById('admin-first').value,
+                lastName: document.getElementById('admin-last').value
+            };
+            
+            try {
+                const res = await fetch('http://localhost:4000/api/auth/create-admin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                document.getElementById('admin-result').innerHTML = `<pre>${JSON.stringify(result, null, 2)}</pre>`;
+            } catch (error) {
+                document.getElementById('admin-result').innerHTML = `Error: ${error.message}`;
+            }
+        }
+
+        async function testUserLogin() {
+            const data = {
+                email: document.getElementById('user-email').value,
+                password: document.getElementById('user-password').value,
+                role: 'user'
+            };
+            
+            try {
+                const res = await fetch('http://localhost:4000/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                document.getElementById('user-result').innerHTML = `<pre>${JSON.stringify(result, null, 2)}</pre>`;
+            } catch (error) {
+                document.getElementById('user-result').innerHTML = `Error: ${error.message}`;
+            }
+        }
+
+        async function testAdminLogin() {
+            const data = {
+                email: document.getElementById('admin-login-email').value,
+                password: document.getElementById('admin-login-password').value,
+                role: 'admin'
+            };
+            
+            try {
+                const res = await fetch('http://localhost:4000/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                document.getElementById('admin-login-result').innerHTML = `<pre>${JSON.stringify(result, null, 2)}</pre>`;
+            } catch (error) {
+                document.getElementById('admin-login-result').innerHTML = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

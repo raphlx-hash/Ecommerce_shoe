@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Admin - Products</title>
+    </head>
+
+<body>
+    <header class="header-1" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-grid'></i>
+            </div>
+            <a href="#" class="nav__logo" onclick="event.preventDefault()">Ropy Admin</a>
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="admin.html" class="nav__link">Dashboard</a></li>
+                    <li class="nav__item"><a href="admin-products.html" class="nav__link active">Products</a></li>
+                    <li class="nav__item"><a href="admin-orders.html" class="nav__link">Orders</a></li>
+                    <li class="nav__item"><a href="admin-users.html" class="nav__link">Users</a></li>
+                </ul>
+            </div>
+            <div class="nav__shop">
+                <button class="button" onclick="location.href='auth.html'">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-1">
+        <section class="admin section">
+            <div class="admin__container bd-grid">
+                <div class="products-management">
+                    <div class="management__header">
+                        <h2 class="section-title">Products Management</h2>
+                        <button class="button" onclick="showAddProductForm()">Add New Product</button>
+                    </div>
+                    <div class="products__table">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Features</th>
+                                    <th>Quantity</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="product-modal">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h3 id="modal-title">Add New Product</h3>
+                    <button class="modal__close" onclick="closeModal()">&times;</button>
+                </div>
+                <form class="modal__form" id="product-form">
+                    <input type="hidden" id="product-id">
+                    <div class="form__group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="product-price">Price</label>
+                            <input type="number" id="product-price" step="0.01" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="product-original-price">Original Price</label>
+                            <input type="number" id="product-original-price" step="0.01">
+                        </div>
+                        <div class="form__group">
+                            <label for="product-quantity">Quantity</label>
+                            <input type="number" id="product-quantity" min="0" value="0">
+                        </div>
+                        <div class="form__group">
+                            <label>Availability</label>
+                            <label class="checkbox-label"><input type="checkbox" id="product-instock" checked> In Stock</label>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label>Category</label>
+                        <div id="product-categories" class="categories-group">
+                            <label class="checkbox-label"><input type="checkbox" value="men"> Men</label>
+                            <label class="checkbox-label"><input type="checkbox" value="women"> Women</label>
+                            <label class="checkbox-label"><input type="checkbox" value="featured"> Featured</label>
+                            <label class="checkbox-label"><input type="checkbox" value="new"> New</label>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="product-brand">Brand</label>
+                            <select id="product-brand">
+                                <option value="">Select brand</option>
+                                <option>Nike</option>
+                                <option>Adidas</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label>Features</label>
+                            <div id="product-features" class="features-group">
+                                <label class="checkbox-label"><input type="checkbox" value="Leather Material"> Leather Material</label>
+                                <label class="checkbox-label"><input type="checkbox" value="Synthetic Material"> Synthetic Material</label>
+                                <label class="checkbox-label"><input type="checkbox" value="Foam Cushoning"> Foam Cushoning</label>
+                                <label class="checkbox-label"><input type="checkbox" value="sleek design"> sleek design</label>
+                                <label class="checkbox-label"><input type="checkbox" value="heavyweight"> heavyweight</label>
+                                <label class="checkbox-label"><input type="checkbox" value="lightweight"> lightweight</label>
+                                <label class="checkbox-label"><input type="checkbox" value="for running"> for running</label>
+                                <label class="checkbox-label"><input type="checkbox" value="for jogging"> for jogging</label>
+                                <label class="checkbox-label"><input type="checkbox" value="for casual uise"> for casual uise</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="product-sizes">Sizes (comma separated)</label>
+                            <input type="text" id="product-sizes" placeholder="US 7, US 8, US 9">
+                        </div>
+                        <div class="form__group">
+                            <label for="product-colors">Colors (comma separated)</label>
+                            <input type="text" id="product-colors" placeholder="Black, White, Red">
+                        </div>
+                    </div>
+                    
+                    <div class="modal__buttons">
+                        <button type="button" class="button button--secondary" onclick="closeModal()">Cancel</button>
+                        <button type="submit" class="button">Save Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Ropy Admin</h3>
+                <p class="fotter__description">Admin Panel for Ropy Ecommerce</p>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__title">Quick Actions</h3>
+                <ul>
+                    <li><a href="admin.html" class="footer__link">Dashboard</a></li>
+                    <li><a href="admin-products.html" class="footer__link">Products</a></li>
+                    <li><a href="admin-orders.html" class="footer__link">Orders</a></li>
+                    <li><a href="admin-users.html" class="footer__link">Users</a></li>
+                </ul>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__title">Data Management</h3>
+                <ul>
+                    <li><a href="#" onclick="exportTotalsReport()" class="footer__link">Export Data</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; 2020 Ropy Admin. All right reserved</p>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/admin-products.js"></script>
+</body>
+
+</html>
+
+
