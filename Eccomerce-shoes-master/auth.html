@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css files  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- box icons  -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login / Register - Ropy</title>
+</head>
+
+<body>
+
+    
+
+    <main class="main-1">
+        <!-- Authentication Section -->
+        <section class="auth section" id="auth">
+            <div class="auth__container bd-grid">
+                <div class="auth__content">
+                    <div class="auth__tabs">
+                        <button class="auth__tab active" id="login-tab" onclick="switchTab('login')">Login</button>
+                        <button class="auth__tab" id="register-tab" onclick="switchTab('register')">Register</button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form class="auth__form active" id="login-form">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to your account</p>
+                        
+                        <div class="form__group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="button auth__button">Sign In</button>
+                        <div class="auth__links">
+                            <p>New user? <a href="#" onclick="switchTab('register')">Register here</a></p>
+                        </div>
+                        
+                    </form>
+
+                    <!-- Register Form -->
+                    <form class="auth__form" id="register-form">
+                        <h2>Create Account</h2>
+                        <p>Sign up to start shopping</p>
+                        
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="register-firstName">First Name</label>
+                                <input type="text" id="register-firstName" name="firstName" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="register-lastName">Last Name</label>
+                                <input type="text" id="register-lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form__group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <div id="email-validation-message" class="validation-message" style="display: none; color: #e74c3c; font-size: 0.875rem; margin-top: 0.25rem;"></div>
+                        </div>
+                        
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="register-password">Password</label>
+                                <input type="password" id="register-password" name="password" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="register-confirm-password">Confirm Password</label>
+                                <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agree-terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" onclick="showTerms()">Terms and Conditions</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="button auth__button">Create Account</button>
+                        
+                        <div class="auth__links">
+                            <p>Already have an account? <a href="#" onclick="switchTab('login')">Sign in here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Ropy</h3>
+                <p class="fotter__description">New Collection Of shoes 2020.</p>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Explorer</h3>
+                <ul>
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="index.html#featured" class="footer__link">Featured</a></li>
+                    
+                    <li><a href="index.html#new" class="footer__link">New</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__title">Support</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Product Help</a></li>
+                    <li><a href="#" class="footer__link">customer Care</a></li>
+                    <li><a href="#" class="footer__link">Athorized services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-google'></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 Ropy. All right reserved</p>
+    </footer>
+
+    <!-- main js  -->
+    <script src="./js/products.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/auth.js"></script>
+    <script>
+        // Tab switching functionality
+        function switchTab(tabName) {
+            const loginTab = document.getElementById('login-tab');
+            const registerTab = document.getElementById('register-tab');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+
+            if (tabName === 'login') {
+                loginTab.classList.add('active');
+                registerTab.classList.remove('active');
+                loginForm.classList.add('active');
+                registerForm.classList.remove('active');
+            } else {
+                registerTab.classList.add('active');
+                loginTab.classList.remove('active');
+                registerForm.classList.add('active');
+                loginForm.classList.remove('active');
+            }
+        }
+
+        // Password confirmation validation
+        document.getElementById('register-confirm-password').addEventListener('input', function() {
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = this.value;
+            
+            if (password !== confirmPassword) {
+                this.setCustomValidity('Passwords do not match');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+
+        // Forgot password functionality
+        function forgotPassword() {
+            alert('Password reset functionality would be implemented here. In a real application, this would send a reset email to the user.');
+        }
+
+        // Show terms and conditions
+        function showTerms() {
+            alert('Terms and Conditions:\n\n1. You must be 18 or older to use this service\n2. All purchases are final\n3. We respect your privacy\n4. Returns accepted within 30 days\n\nThis is a demo application.');
+        }
+    </script>
+</body>
+
+</html>
