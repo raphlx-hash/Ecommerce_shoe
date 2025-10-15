@@ -1,0 +1,598 @@
+[{
+  "_id": {
+    "$oid": "68d4b74f4bfbb9dfbb0933a5"
+  },
+  "name": "Nike Jordan",
+  "price": 149.2,
+  "originalPrice": 199.2,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Jordan.png",
+  "description": "The iconic Nike Jordan sneaker featuring premium materials and classic design.",
+  "inStock": true,
+  "quantity": 3,
+  "features": [
+    "Leather Material",
+    "Foam Cushoning",
+    "for running"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "Red"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "featured"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:30:23.735Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T14:59:28.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4b9804bfbb9dfbb0933aa"
+  },
+  "name": "Nike Free Nm",
+  "price": 149.2,
+  "originalPrice": 179.2,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Free Nm.png",
+  "description": "Lightweight running shoe with natural motion technology for ultimate comfort.",
+  "inStock": true,
+  "quantity": 4,
+  "features": [
+    "Leather Material",
+    "heavyweight",
+    "for jogging"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "Black"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "featured"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:39:44.432Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T14:59:11.745Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4b9a74bfbb9dfbb0933ad"
+  },
+  "name": "Nike Jordan Yd",
+  "price": 149.2,
+  "originalPrice": 189.2,
+  "description": "Premium Jordan design with enhanced cushioning and durability.",
+  "inStock": true,
+  "quantity": 5,
+  "features": [
+    "Leather Material",
+    "Foam Cushoning",
+    "for running"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "Greenish-White"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": "featured",
+  "createdAt": {
+    "$date": "2025-09-25T03:40:23.293Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T04:03:03.891Z"
+  },
+  "__v": 0,
+  "image": "/uploads/1758771699883_nike-f3.png"
+},
+{
+  "_id": {
+    "$oid": "68d4ba8a4bfbb9dfbb0933ba"
+  },
+  "name": "adidas Women Amalgo W Running Shoe",
+  "price": 132,
+  "originalPrice": 155,
+  "image": "/uploads/1758771850527_adidas4.png",
+  "description": "The two parts higher quality EVA MIDSOLE concept created provides extra cushion, comfort, flexibility and resilience from toe-off through every phase of your stride. It is delivered in dual colours to create an aesthetically pleasing footwear. Half midsole design promotes a great fit and all-day comfort while the soft underfoot feel comes from a springy midsole foam that creates a smooth ride.",
+  "inStock": true,
+  "quantity": 4,
+  "features": [
+    "Synthetic Material",
+    "sleek design",
+    "for jogging"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9"
+  ],
+  "colors": [
+    "Purple"
+  ],
+  "gender": "unisex",
+  "brand": "Adidas",
+  "category": [
+    "women,new"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:44:10.535Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T07:17:03.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4bb234bfbb9dfbb0933bd"
+  },
+  "name": "adidas Women Base X W Running Shoes",
+  "price": 144,
+  "originalPrice": 159,
+  "image": "/uploads/1758772003111_adidas3.png",
+  "description": "Elevate your running experience with the Adidas Base X W shoes, designed for both exceptional comfort and performance. The breathable mesh upper ensures optimal ventilation, keeping your feet cool and dry during intense workouts.",
+  "inStock": true,
+  "quantity": 6,
+  "features": [
+    "Foam Cushoning",
+    "sleek design",
+    "for jogging"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 4",
+    "US 5",
+    "US 6",
+    "US 7",
+    "US 8"
+  ],
+  "colors": [
+    "Pink"
+  ],
+  "gender": "unisex",
+  "brand": "Adidas",
+  "category": [
+    "women"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:46:43.117Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T07:17:12.803Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4bbd74bfbb9dfbb0933c2"
+  },
+  "name": "Adidas Grand Court 2.0 Unisex Casual Sneaker",
+  "price": 134,
+  "originalPrice": 142,
+  "image": "/uploads/1758772183582_adidas1.png",
+  "description": "The added forefoot flex plus a Cloudfoam Comfort sockliner in these men's adidas shoes create a luxe feel. The 3-Stripes pick up colours from World Friendship Day. A flagship model for sustaiNot applicablebility, the shoes boast a synthetic leather upper.  ",
+  "inStock": true,
+  "quantity": 7,
+  "features": [
+    "Leather Material",
+    "sleek design",
+    "for casual uise"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "White"
+  ],
+  "gender": "unisex",
+  "brand": "Adidas",
+  "category": [
+    "men,new"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:49:43.587Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T07:18:14.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4bc254bfbb9dfbb0933c7"
+  },
+  "name": "adidas Men Adi-Shawt M Running Shoe",
+  "price": 122,
+  "originalPrice": 132,
+  "image": "/uploads/1758772261313_adidas2.png",
+  "description": "When you're ready to get serious about running, you're ready for adidas Adi-Shawt Shoes. They feature a breathable mesh upper along with an EVA midsole which provides optimum cushioning where you need it most. The rubber outsole offers ample traction and skid resistance. Embossing along the mid-foot lends it a 3D look.",
+  "inStock": true,
+  "quantity": 6,
+  "features": [
+    "Leather Material",
+    "Foam Cushoning",
+    "for running"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [],
+  "colors": [
+    "Blue"
+  ],
+  "gender": "unisex",
+  "brand": "Adidas",
+  "category": [
+    "men"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:51:01.317Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T07:18:05.316Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4bd6b4bfbb9dfbb0933df"
+  },
+  "name": "Nike Ges bink",
+  "price": 130.55,
+  "originalPrice": 160.55,
+  "image": "/uploads/1758772587948_women3.png",
+  "description": "Elegant women's sneaker with modern design and superior comfort.\r\n\r\n",
+  "inStock": true,
+  "quantity": 8,
+  "features": [
+    "Synthetic Material",
+    "Foam Cushoning",
+    "for jogging"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 4",
+    "US 5",
+    "US 6",
+    "US 7",
+    "US 8"
+  ],
+  "colors": [
+    "Pink"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "women,new"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T03:56:27.951Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:13:40.297Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d4bec24bfbb9dfbb0933e7"
+  },
+  "name": "Nike free Tr",
+  "price": 130.55,
+  "originalPrice": 160.55,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Sply.png",
+  "description": "Versatile women's sneaker perfect for both training and casual wear.\r\n\r\n",
+  "inStock": true,
+  "quantity": 7,
+  "features": [
+    "Synthetic Material",
+    "Foam Cushoning",
+    "for jogging"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 4",
+    "US 5",
+    "US 6",
+    "US 7",
+    "US 8"
+  ],
+  "colors": [
+    "Orange"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "women"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T04:02:10.424Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:20:18.839Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d55e0d36ff2a28833a0fa9"
+  },
+  "name": "Nike Sply",
+  "price": 120.2,
+  "originalPrice": 150.2,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Sply.png",
+  "description": "Latest Nike Sply collection featuring innovative design and technology.",
+  "inStock": true,
+  "quantity": 7,
+  "features": [
+    "Foam Cushoning",
+    "heavyweight",
+    "for jogging"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 4",
+    "US 5",
+    "US 6",
+    "US 7",
+    "US 8"
+  ],
+  "colors": [
+    "Brown"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "women,new"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T15:21:49.115Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:21:49.115Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d55f9e36ff2a28833a0fb7"
+  },
+  "name": "adidas Women Galaxy 6 W Running Shoe",
+  "price": 133.2,
+  "originalPrice": 140.2,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\adidas Women Galaxy 6 W Running Shoe.png",
+  "description": "It was true then, and it's true now. adidas designs shoes with athletes in mind. These running shoes can be worn anytime, but they're still equipped with some innovative tech. The lightweight mesh upper lets air flow, and the Cloudfoam midsole gives a springy, cushioned feel. A soft sockliner keeps feet feeling supported, no matter how often you put them through a long walk or workout. Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste.",
+  "inStock": true,
+  "quantity": 7,
+  "features": [
+    "Synthetic Material",
+    "Foam Cushoning",
+    "heavyweight"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 4",
+    "US 5",
+    "US 6",
+    "US 7",
+    "US 8"
+  ],
+  "colors": [
+    "white"
+  ],
+  "gender": "unisex",
+  "brand": "Adidas",
+  "category": [
+    "women"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T15:28:30.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:28:30.142Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d5617c36ff2a28833a0fcc"
+  },
+  "name": "adidas Men Vac-Run Running Shoe",
+  "price": 145.2,
+  "originalPrice": 155.2,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\adidas Men Vac-Run Running Shoe.png",
+  "description": "Wherever your run takes you, your running shoes should give you comfort, protection and support where and when you need it most. We have the right product for you. Running is perhaps the purest, most universal form of fitness. Whether you're competing on the track, aiming for a marathon, a 5k run or a jog in the park, running is open to us all. The Textile Upper Feels Comfy And Breathable, And The Rubber Outsole Gives You Plenty Of Grip For A Confident Stride. An Ortholite sockliner provides additional cushioning.",
+  "inStock": true,
+  "quantity": 9,
+  "features": [
+    "Synthetic Material",
+    "Foam Cushoning",
+    "lightweight"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "white"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "men,new"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T15:36:28.435Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:36:52.001Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d5637936ff2a28833a0fe9"
+  },
+  "name": "Nike Men Shoes",
+  "price": 144,
+  "originalPrice": 156,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Men Shoes.png",
+  "description": "The M ZOOM GP CHALLENGE PRO HC PRM is a high-performance running shoe designed for serious athletes and enthusiasts. Featuring a lightweight and breathable upper, it ensures optimal comfort and support during intense workouts. The shoe incorporates advanced cushioning technology that absorbs impact, providing a responsive feel with every stride. Its durable outsole offers excellent traction on various surfaces, making it suitable for both road and trail running. The sleek design is complemented by vibrant color options, appealing to those who value style as much as performance. Ideal for competitive runners, the M ZOOM GP CHALLENGE PRO HC PRM is engineered to enhance speed and efficiency.",
+  "inStock": true,
+  "quantity": 5,
+  "features": [
+    "Leather Material",
+    "sleek design",
+    "lightweight"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "Brown"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "men"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T15:44:57.986Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:45:16.959Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d563d336ff2a28833a0fef"
+  },
+  "name": "Nike Men Running Shoes",
+  "price": 125,
+  "originalPrice": 134,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Men Running Shoes.png",
+  "description": "Designed for comfortable wear for sports and street style, NIKE is always fun to wear. Upgrade in style with a wide range from the world’s leading and much-loved sports brand, NIKE.",
+  "inStock": true,
+  "quantity": 6,
+  "features": [
+    "Leather Material",
+    "sleek design",
+    "lightweight",
+    "for running"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "white"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "men"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T15:46:27.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:46:27.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d5645736ff2a28833a0ff2"
+  },
+  "name": "Nike Mens C1ty PRM Walking",
+  "price": 140,
+  "originalPrice": 145,
+  "image": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ecommerce_shoe-main\\Eccomerce-shoes-master\\images\\Nike Mens C1ty PRM Walking.png",
+  "description": "NIKE MENS C1TY PRM WALKING SHOES",
+  "inStock": true,
+  "quantity": 8,
+  "features": [
+    "Leather Material",
+    "sleek design",
+    "for casual uise"
+  ],
+  "rating": 0,
+  "reviews": 0,
+  "sizes": [
+    "US 7",
+    "US 8",
+    "US 9",
+    "US 10"
+  ],
+  "colors": [
+    "Brown"
+  ],
+  "gender": "unisex",
+  "brand": "Nike",
+  "category": [
+    "men,new"
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T15:48:39.750Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-25T15:48:39.750Z"
+  },
+  "__v": 0
+}]
